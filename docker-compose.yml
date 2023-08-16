@@ -1,0 +1,15 @@
+version: '3.0'
+services:
+  chat_api:
+    container_name: "chat_api"
+    volumes:
+      - ./app:/workspace/app:cached
+      - ./scripts:/workspace/scripts:cached
+    build:
+      context: ./docker/api
+      dockerfile: Dockerfile
+    working_dir: /workspace/scripts
+    tty: true
+    ports:
+      - '5001:80'
+  

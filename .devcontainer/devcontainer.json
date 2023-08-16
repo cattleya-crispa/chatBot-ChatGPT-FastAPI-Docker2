@@ -1,0 +1,8 @@
+{
+	"name": "fast-api-chatbot-docker", //コンテナ名
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "chat_api", 
+	"workspaceFolder": "/workspace",
+    "shutdownAction": "stopCompose",
+    "extensions": ["ms-python.python"]
+}
